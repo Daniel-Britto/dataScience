@@ -1,8 +1,10 @@
 from functools import reduce
 import math
 
-lista1 = [1, 2, 3]
-lista2 = [2, 6, 7]
+list1 = [1, 2, 3]
+list2 = [2, 6, 7]
+value = 3
+vectors = [[1, 2 ,3], [4, 6, 7], [5, 7, 8]]
 
 # somando vetores
 def vector_add(v, w):
@@ -16,11 +18,9 @@ def vector_subtract(v, w):
     return [v_i - w_i
             for v_i, w_i in zip(v, w)]
 
-value = 3
-vectors = [[1, 2 ,3], [4, 6, 7], [5, 7, 8]]
-
 """def vector_sum(vectors):
-    result = vectors[0]
+    result = vectors[0]value = 3
+vectors = [[1, 2 ,3], [4, 6, 7], [5, 7, 8]]
     for vector in vectors[1:]:
         result = vector_add(result, vector)
     return result"""
@@ -63,4 +63,4 @@ def distance(v, w):
 def distance_02(v, w):
     return magnitude(vector_subtract(v, w))
 
-print(distance_02(lista1, lista2))
+print(distance_02(list1, list2))
